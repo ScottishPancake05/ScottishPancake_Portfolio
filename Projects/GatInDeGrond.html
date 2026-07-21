@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Gat In De Grond - Scottish Pancake</title>
+
+    <!-- Google Pixel Font -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS -->
+
+    <link rel="stylesheet" href="../CSS/style.css" />
+
+    <!-- Project Detail CSS -->
+
+    <link rel="stylesheet" href="../CSS/project-detail.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+
+    <header class="main-header">
+      <nav class="nav-bar">
+        <ul>
+          <li>
+            <a href="../Pages/home.html"> Home </a>
+          </li>
+
+          <li>
+            <a href="../Pages/about.html"> About Me </a>
+          </li>
+
+          <li>
+            <a href="../Pages/contact.html"> Contact </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- PROJECT DETAIL -->
+
+    <section class="project-detail">
+      <h1>Gat In De Grond</h1>
+
+      <div class="project-flex">
+        <!-- LEFT SIDE -->
+
+        <div class="project-left">
+          <div class="main-showcase">
+            <img
+              src="../Assets/Images/GatInDeGrond/a.png"
+              alt="Gat In De Grond Screenshot"
+              class="main-image"
+              id="mainImage"
+            />
+          </div>
+
+          <div class="thumbnails">
+            <img
+              src="../Assets/Images/GatInDeGrond/a.png"
+              onclick="changeShowcase('../Assets/Images/GatInDeGrond/a.png')"
+              alt="Gat In De Grond image 1"
+            />
+
+            <img
+              src="../Assets/Images/wavegrid.jpg"
+              onclick="changeShowcase('../Assets/Images/wavegrid.jpg')"
+              alt="Gat In De Grond image 2"
+            />
+
+            <img
+              src="../Assets/Images/wavegrid.jpg"
+              onclick="changeShowcase('../Assets/Images/wavegrid.jpg')"
+              alt="Gat In De Grond image 3"
+            />
+          </div>
+
+          <div class="project-summary">
+            <p>
+              Gat In De Grond was an AR experience project created during my
+              game development studies.
+              <br /><br />
+
+              This project focused on creating an interactive experience for
+              mobile devices while learning more about Unity and augmented
+              reality development.
+              <br /><br />
+
+              It helped me explore a different side of game development outside
+              traditional PC games.
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="project-right">
+          <div class="info-card">
+            <p>
+              <strong> Genre: </strong>
+
+              AR Experience
+            </p>
+
+            <p>
+              <strong> Platform: </strong>
+
+              Mobile
+            </p>
+
+            <p>
+              <strong> Status: </strong>
+
+              Finished
+            </p>
+
+            <p>
+              <strong> Engine: </strong>
+
+              Unity
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMAGE SWITCH SCRIPT -->
+
+    <script>
+      function changeShowcase(imageSrc) {
+        const mainImage = document.getElementById("mainImage");
+
+        mainImage.src = imageSrc;
+      }
+    </script>
+  </body>
+</html>

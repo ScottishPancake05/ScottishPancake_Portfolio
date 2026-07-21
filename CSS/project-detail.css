@@ -1,0 +1,98 @@
+/* ===== FIGMA-STYLE PROJECT LAYOUT ===== */
+
+.project-detail {
+  width: 90%;
+  max-width: 1100px;
+  margin: 80px auto;
+  color: #66ccff;
+  font-family: "Press Start 2P", cursive;
+}
+
+.project-detail h1 {
+  font-size: 36px;
+  text-align: center;
+  text-shadow: 0 0 20px #ff66cc;
+  margin-bottom: 40px;
+}
+
+/* FLEXBOX LAYOUT like Figma frames */
+.project-flex {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* LEFT SIDE */
+.project-left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.main-showcase {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px #ff66cc;
+}
+
+.main-showcase img {
+  width: 100%;
+  display: block;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.thumbnails img {
+  width: 30%;
+  border-radius: 8px;
+  border: 2px solid #ff66cc;
+  transition: 0.3s;
+}
+
+.thumbnails img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 25px #ff66cc;
+}
+
+/* Summary text card */
+.project-summary {
+  background: rgba(102, 102, 255, 0.1);
+  border: 2px solid #ff66cc;
+  border-radius: 12px;
+  padding: 20px;
+  line-height: 1.6;
+  font-size: 14px;
+  box-shadow: 0 0 15px #ff66cc;
+}
+
+/* RIGHT SIDE */
+.project-right {
+  flex: 1;
+}
+
+/* Info card — Figma-like stacked panel */
+.info-card {
+  background: rgba(102, 102, 255, 0.08);
+  border: 2px solid #ff66cc;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 0 15px #ff66cc;
+}
+
+.info-card p {
+  padding: 10px 14px;
+  border: 2px solid #ff66cc;
+  border-radius: 8px;
+  background: rgba(102, 102, 255, 0.1);
+  font-size: 12px;
+  color: #66ccff;
+}
