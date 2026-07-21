@@ -7,7 +7,6 @@
     <title>About Me - Scottish Pancake</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -32,7 +31,6 @@
             Though I am still a student, I strive to learn and grow every day and become the best developer I can be.
         </p>
     </section>
-
 
     <!-- SKILLS CHART -->
     <section class="skills-section">
@@ -125,39 +123,8 @@
         <img src="Gifs/AvatarSprite.gif" class="pixel-avatar">
     </div>
 
-    <script>
-        document.querySelectorAll('.skill-fill').forEach(el => {
-            const width = el.style.width;
-            el.style.width = '0';
-            setTimeout(() => { el.style.width = width; }, 500);
-        });
-    </script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            document.querySelectorAll(".skill-bar").forEach(bar => {
-                const fill = bar.querySelector(".skill-fill");
-                const label = bar.querySelector(".skill-label");
-                const targetWidth = fill.style.width;
-
-                // Reset to animate from 0
-                fill.style.width = "0";
-
-                // Animate fill
-                setTimeout(() => {
-                    fill.style.width = targetWidth;
-
-                    // After fill animation finishes → show label
-                    setTimeout(() => {
-                        label.classList.add("show");
-                    }, 1500);
-
-                }, 200);
-            });
-        });
-    </script>
-
-
+    <script src="script.js"></script>
 </body>
 
 </html>
