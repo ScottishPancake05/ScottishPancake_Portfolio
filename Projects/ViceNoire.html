@@ -55,31 +55,65 @@
         <div class="project-left">
           <div class="main-showcase">
             <img
-              src="../Assets/Images/ViceNoire/ViceNoireThumbnail.png"
+              src="../Assets/Images/ViceNoire/ViceNoirePoster.png"
               alt="Vice Noire Screenshot"
               class="main-image"
               id="mainImage"
             />
           </div>
 
-          <div class="thumbnails">
-            <img
-              src="../Assets/Images/ViceNoire/vice2.png"
-              onclick="changeShowcase('../Assets/Images/ViceNoire/vice2.png')"
-              alt="Vice Noire image 1"
-            />
+          <div class="thumbnail-gallery">
+            <button class="gallery-arrow left" onclick="scrollThumbnails(-1)">
+              &#10094;
+            </button>
 
-            <img
-              src="../Assets/Images/ViceNoire/vice3.png"
-              onclick="changeShowcase('../Assets/Images/ViceNoire/vice3.png')"
-              alt="Vice Noire image 2"
-            />
+            <div class="thumbnail-window">
+              <div class="thumbnails">
+                <img
+                  src="../Assets/Images/ViceNoire/ViceNoireThumbnail.png"
+                  onclick="
+                    changeShowcase(
+                      '../Assets/Images/ViceNoire/ViceNoirePoster.png',
+                    )
+                  "
+                  alt="Vice Noire image 1"
+                />
 
-            <img
-              src="../Assets/Images/ViceNoire/vice4.png"
-              onclick="changeShowcase('../Assets/Images/ViceNoire/vice4.png')"
-              alt="Vice Noire image 3"
-            />
+                <img
+                  src="../Assets/Images/ViceNoire/vice3.png"
+                  onclick="
+                    changeShowcase('../Assets/Images/ViceNoire/vice3.png')
+                  "
+                  alt="Vice Noire image 2"
+                />
+
+                <img
+                  src="../Assets/Images/ViceNoire/vice4.png"
+                  onclick="changeShowcase('../Assets/Gifs/Vice4.gif')"
+                  alt="Vice Noire image 3"
+                />
+
+                <!-- ADD MORE IMAGES HERE -->
+
+                <img
+                  src="../Assets/Images/ViceNoire/car.png"
+                  onclick="changeShowcase('../Assets/Images/ViceNoire/car.png')"
+                  alt="Vice Noire image 4"
+                />
+
+                <img
+                  src="../Assets/Images/ViceNoire/NightCity.png"
+                  onclick="
+                    changeShowcase('../Assets/Images/ViceNoire/NightCity.png')
+                  "
+                  alt="Vice Noire image 5"
+                />
+              </div>
+            </div>
+
+            <button class="gallery-arrow right" onclick="scrollThumbnails(1)">
+              &#10095;
+            </button>
           </div>
 
           <div class="project-summary">
@@ -128,13 +162,6 @@
     </section>
 
     <!-- JAVASCRIPT -->
-
-    <script>
-      function changeShowcase(imageSrc) {
-        const mainImage = document.getElementById("mainImage");
-
-        mainImage.src = imageSrc;
-      }
-    </script>
+    <script src="../JS/script.js"></script>
   </body>
 </html>

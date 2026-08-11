@@ -31,3 +31,32 @@ setTimeout(() => {
     label.classList.add("show");
   });
 }, 1100);
+
+/* showcase arrows */
+function changeShowcase(imageSrc) {
+  const mainImage = document.getElementById("mainImage");
+
+  if (!mainImage) return;
+
+  mainImage.src = imageSrc;
+}
+
+let thumbnailPosition = 0;
+
+function scrollThumbnails(direction) {
+  const thumbnails = document.querySelector(".thumbnails");
+
+  if (!thumbnails) return;
+
+  thumbnailPosition += direction;
+
+  if (thumbnailPosition < 0) {
+    thumbnailPosition = 0;
+  }
+
+  if (thumbnailPosition > 2) {
+    thumbnailPosition = 2;
+  }
+
+  thumbnails.style.transform = "translateX(" + thumbnailPosition * -200 + "px)";
+}

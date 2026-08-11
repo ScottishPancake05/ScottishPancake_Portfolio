@@ -42,22 +42,59 @@
   display: block;
 }
 
+.thumbnail-gallery {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.thumbnail-window {
+  overflow: hidden;
+  flex: 1;
+}
+
 .thumbnails {
   display: flex;
-  justify-content: space-between;
   gap: 20px;
+  transition: transform 0.3s ease;
 }
 
 .thumbnails img {
   width: 30%;
+  flex-shrink: 0;
   border-radius: 8px;
   border: 2px solid #ff66cc;
   transition: 0.3s;
 }
 
 .thumbnails img:hover {
-  transform: scale(1.06);
+  transform: scale(1.02);
   box-shadow: 0 0 25px #ff66cc;
+}
+
+/* Gallery arrows */
+
+.gallery-arrow {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+
+  border: 2px solid #ff66cc;
+  border-radius: 8px;
+
+  background: rgba(18, 0, 59, 0.85);
+  color: #66ccff;
+
+  font-size: 22px;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.gallery-arrow:hover {
+  background: #ff66cc;
+  color: #050018;
+  box-shadow: 0 0 15px #ff66cc;
 }
 
 /* Summary text card */
@@ -76,7 +113,6 @@
   flex: 1;
 }
 
-/* Info card — Figma-like stacked panel */
 .info-card {
   background: rgba(102, 102, 255, 0.08);
   border: 2px solid #ff66cc;
