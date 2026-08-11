@@ -32,7 +32,7 @@ setTimeout(() => {
   });
 }, 1100);
 
-/* showcase arrows */
+/* Showcase arrows */
 function changeShowcase(imageSrc) {
   const mainImage = document.getElementById("mainImage");
 
@@ -41,22 +41,15 @@ function changeShowcase(imageSrc) {
   mainImage.src = imageSrc;
 }
 
-let thumbnailPosition = 0;
-
 function scrollThumbnails(direction) {
-  const thumbnails = document.querySelector(".thumbnails");
+  const thumbnailWindow = document.querySelector(".thumbnail-window");
 
-  if (!thumbnails) return;
+  if (!thumbnailWindow) return;
 
-  thumbnailPosition += direction;
+  const scrollAmount = 200;
 
-  if (thumbnailPosition < 0) {
-    thumbnailPosition = 0;
-  }
-
-  if (thumbnailPosition > 2) {
-    thumbnailPosition = 2;
-  }
-
-  thumbnails.style.transform = "translateX(" + thumbnailPosition * -200 + "px)";
+  thumbnailWindow.scrollBy({
+    left: direction * scrollAmount,
+    behavior: "smooth",
+  });
 }
