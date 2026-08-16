@@ -1,4 +1,4 @@
-/* Project Vidoe highlight hover */
+/* Project Video highlight hover */
 document.querySelectorAll(".project-box").forEach((box) => {
   const video = box.querySelector(".preview-video");
 
