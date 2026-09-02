@@ -1,110 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title> Spook-e-scape - Scottish Pancake </title>
+    <title>Spook-e-scape - Scottish Pancake</title>
 
     <!-- Google Pixel Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="../CSS/project-detail.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/project-detail.css" />
+  </head>
 
-
-</head>
-
-<body>
-
+  <body>
     <header class="main-header">
-        <nav class="nav-bar">
-            <ul>
-                <li> <a href="../Pages/home.html"> Home </a> </li>
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="../Pages/index.html"> Home </a></li>
 
-                <li> <a href="../Pages/about.html"> About Me </a> </li>
+          <li><a href="../Pages/about.html"> About Me </a></li>
 
-                <li> <a href="../Pages/contact.html"> Contact </a> </li>
-
-            </ul>
-
-        </nav>
+          <li><a href="../Pages/contact.html"> Contact </a></li>
+        </ul>
+      </nav>
     </header>
 
     <section class="project-detail">
+      <h1>Spook-e-scape</h1>
 
-        <h1> Spook-e-scape </h1>
+      <div class="project-flex">
+        <div class="project-left">
+          <div class="main-showcase">
+            <img
+              src="../Assets/Images/SpookEscape/Spook-E-ScapeThumbnail.png"
+              alt="Spook-e-scape Screenshot"
+              class="main-image"
+              id="mainImage"
+            />
+          </div>
 
-        <div class="project-flex">
+          <div class="thumbnails">
+            <img
+              src="../Assets/Images/SpookEscape/Spook-E-ScapeThumbnail.png"
+              onclick="
+                changeShowcase(
+                  '../Assets/Images/SpookEscape/Spook-E-ScapeThumbnail.png',
+                )
+              "
+              alt="Spook-e-scape image 1"
+            />
 
-            <div class="project-left">
+            <img
+              src="../Assets/Images/wavegrid.jpg"
+              onclick="changeShowcase('../Assets/Images/wavegrid.jpg')"
+              alt="Spook-e-scape image 2"
+            />
 
-                <div class="main-showcase">
+            <img
+              src="../Assets/Images/wavegrid.jpg"
+              onclick="changeShowcase('../Assets/Images/wavegrid.jpg')"
+              alt="Spook-e-scape image 3"
+            />
+          </div>
 
-                    <img src="../Assets/Images/SpookEscape/Spook-E-ScapeThumbnail.png" alt="Spook-e-scape Screenshot"
-                        class="main-image" id="mainImage">
+          <div class="project-summary">
+            <p>
+              Spook-e-scape is a platformer project inspired by spooky
+              environments and exploration.
+              <br /><br />
 
-                </div>
+              The project focused on creating gameplay mechanics, level design
+              and atmosphere using Unity.
+              <br /><br />
 
-                <div class="thumbnails">
-
-                    <img src="../Assets/Images/SpookEscape/Spook-E-ScapeThumbnail.png"
-                        onclick="changeShowcase('../Assets/Images/SpookEscape/Spook-E-ScapeThumbnail.png')"
-                        alt="Spook-e-scape image 1">
-
-                    <img src="../Assets/Images/wavegrid.jpg" onclick="changeShowcase('../Assets/Images/wavegrid.jpg')"
-                        alt="Spook-e-scape image 2">
-
-                    <img src="../Assets/Images/wavegrid.jpg" onclick="changeShowcase('../Assets/Images/wavegrid.jpg')"
-                        alt="Spook-e-scape image 3">
-
-                </div>
-
-                <div class="project-summary">
-
-
-                    <p>
-
-                        Spook-e-scape is a platformer project inspired by
-                        spooky environments and exploration.
-                        <br><br>
-
-                        The project focused on creating gameplay mechanics,
-                        level design and atmosphere using Unity.
-                        <br><br>
-
-                        This project allowed me to experiment with creating
-                        a fun and visually interesting player experience.
-
-                    </p>
-
-                </div>
-            </div>
-
-            <div class="project-right">
-
-                <div class="info-card">
-                    <p><strong> Genre: </strong> Escape room </p>
-                    <p><strong> Platform: </strong> PC </p>
-                    <p><strong> Game status: </strong> Demo</p>
-                    <p><strong> Engine: </strong> Unity </p>
-                </div>
-
-            </div>
-
+              This project allowed me to experiment with creating a fun and
+              visually interesting player experience.
+            </p>
+          </div>
         </div>
 
+        <div class="project-right">
+          <div class="info-card">
+            <p><strong> Genre: </strong> Escape room</p>
+            <p><strong> Platform: </strong> PC</p>
+            <p><strong> Game status: </strong> Demo</p>
+            <p><strong> Engine: </strong> Unity</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- IMAGE SWITCH SCRIPT -->
     <script>
-        function changeShowcase(imageSrc) {
-            const mainImage = document.getElementById("mainImage");
-            mainImage.src = imageSrc;
-        }
+      function changeShowcase(imageSrc) {
+        const mainImage = document.getElementById("mainImage");
+        mainImage.src = imageSrc;
+      }
     </script>
-
-</body>
-
+  </body>
 </html>
