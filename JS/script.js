@@ -53,3 +53,39 @@ function scrollThumbnails(direction) {
     behavior: "smooth",
   });
 }
+
+/* Optional Vanilla JS AJAX Submission Handler */
+const contactForm = document.querySelector(".contact-form");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const data = new FormData(contactForm);
+    const button = contactForm.querySelector('button[type="submit"]');
+
+    button.disabled = true;
+    button.textContent = "Sending...";
+
+    try {
+      const response = await fetch("https://formspree.io/f/mvkorgol", {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        alert("Thanks for your message!");
+        contactForm.reset();
+      } else {
+        alert("Oops! There was a problem submitting your form.");
+      }
+    } catch (error) {
+      alert("Oops! There was a problem submitting your form.");
+    } finally {
+      button.disabled = false;
+      button.textContent = "Submit";
+    }
+  });
+}
