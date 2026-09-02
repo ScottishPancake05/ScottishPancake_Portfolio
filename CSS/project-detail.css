@@ -28,24 +28,91 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
+  min-width: 0;
 }
 
+/* SHOWCASE CONTAINER & VIDEO */
 .main-showcase {
+  position: relative;
   width: 100%;
-  border-radius: 12px;
+  border-radius: 8px;
+  border: 2px solid #ff66cc;
+  box-shadow: 0 0 15px #ff66cc;
   overflow: hidden;
-  box-shadow: 0 0 20px #ff66cc;
+  background: #000;
 }
 
-.main-showcase img {
+.main-image,
+.main-video {
   width: 100%;
   display: block;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
+.video-container {
+  position: relative;
+  width: 100%;
+}
+
+/* RETROWAVE VIDEO CONTROLS OVERLAY */
+.custom-video-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 15px;
+  background: rgba(10, 10, 25, 0.85);
+  border-top: 2px solid #ff66cc;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 -4px 15px rgba(255, 102, 204, 0.4);
+  z-index: 5;
+}
+
+.vapor-btn {
+  background: rgba(102, 102, 255, 0.2);
+  border: 1px solid #ff66cc;
+  color: #66ccff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.vapor-btn:hover {
+  background: rgba(255, 102, 204, 0.4);
+  box-shadow: 0 0 8px #ff66cc;
+}
+
+/* RETROWAVE NEON PROGRESS BAR */
+.progress-bar-wrapper {
+  flex: 1;
+  height: 10px;
+  background: rgba(102, 102, 255, 0.2);
+  border: 1px solid #66ccff;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ff66cc, #66ccff);
+  box-shadow: 0 0 10px #ff66cc;
+  transition: width 0.1s linear;
+}
+
+/* THUMBNAIL GALLERY */
 .thumbnail-gallery {
   display: flex;
   align-items: center;
   gap: 10px;
+  width: 100%;
 }
 
 .thumbnail-window {
@@ -55,40 +122,40 @@
 
 .thumbnails {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   transition: transform 0.3s ease;
 }
 
 .thumbnails img {
-  width: 25%;
+  width: calc(25% - 12px);
   flex-shrink: 0;
   border-radius: 8px;
   border: 2px solid #ff66cc;
   transition: 0.3s;
+  cursor: pointer;
+  object-fit: cover;
 }
 
 .thumbnails img:hover {
   transform: scale(1.02);
-  box-shadow: 0 0 25px #ff66cc;
+  box-shadow: 0 0 15px #ff66cc;
 }
 
 /* GALLERY ARROWS */
-
 .gallery-arrow {
   width: 45px;
   height: 45px;
   flex-shrink: 0;
-
   border: 2px solid #ff66cc;
   border-radius: 8px;
-
   background: rgba(18, 0, 59, 0.85);
   color: #66ccff;
-
   font-size: 22px;
   cursor: pointer;
-
   transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .gallery-arrow:hover {
@@ -97,7 +164,7 @@
   box-shadow: 0 0 15px #ff66cc;
 }
 
-/* PROJECT SUMMARY CARD*/
+/* PROJECT SUMMARY CARD */
 .project-summary {
   background: rgba(102, 102, 255, 0.1);
   border: 2px solid #ff66cc;

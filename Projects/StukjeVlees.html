@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project - Scottish Pancake</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../CSS/style.css" />
+
+    <link rel="stylesheet" href="../CSS/project-detail.css" />
+  </head>
+
+  <body>
+    <header class="main-header">
+      <nav class="nav-bar">
+        <ul>
+          <li> <a href="../index.html"> Home </a> </li>
+          <li> <a href="../Pages/about.html"> About Me </a> </li>
+          <li> <a href="../Pages/contact.html"> Contact </a> </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="project-detail">
+      <h1>Project</h1>
+
+      <div class="project-flex">
+        <div class="project-left">
+          <div class="main-showcase">
+            <img src="../Assets/Images/BeardmanAdventure/A real Hero. You Win!.png" alt="Project Screenshot" class="main-image" id="mainImage"/>
+
+            <div class="video-container" id="videoContainer" style="display: none">
+             
+              <video id="mainVideo" autoplay loop playsinline class="main-video" ></video>
+
+              <div class="custom-video-controls">
+                <button type="button" id="playPauseBtn" class="vapor-btn"> ⏸ </button>
+
+                <div class="progress-bar-wrapper" id="progressWrapper">
+                  <div class="progress-bar-fill" id="progressFill"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="thumbnail-gallery">
+            <button class="gallery-arrow left" onclick="scrollThumbnails(-1)"> &#10094; </button>
+
+            <div class="thumbnail-window">
+              <div class="thumbnails">
+
+                <img src="../Assets/Images/BeardmanAdventure/A real Hero. You Win!.png" 
+                onclick=" changeShowcase('../Assets/Images/BeardmanAdventure/A real Hero. You Win!.png',)" alt="Project image 1" />
+
+              </div>
+            </div>
+
+            <button class="gallery-arrow right" onclick="scrollThumbnails(1)"> &#10095; </button>
+          </div>
+
+          <div class="project-summary"> <p> summary </p> </div>
+        </div>
+
+        <div class="project-right">
+          <div class="info-card">
+            <p>
+              <strong> Genre: </strong>
+            </p>
+
+            <p>
+              <strong> Platform: </strong>
+            </p>
+
+            <p>
+              <strong> Status: </strong>
+            </p>
+
+            <p>
+              <strong> Engine: </strong>
+            </p>
+
+            <a href="https://github.com/ScottishPancake05/MMPRO_StukjeVlees" target="_blank" class="info-btn">
+              <strong> GitHub Repository </strong>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../JS/script.js"></script>
+  </body>
+</html>

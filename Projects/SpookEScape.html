@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project - Scottish Pancake</title>
 
-    <title>Spook-e-scape - Scottish Pancake</title>
-
-    <!-- Google Pixel Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="../CSS/style.css" />
+
     <link rel="stylesheet" href="../CSS/project-detail.css" />
   </head>
 
@@ -19,86 +19,88 @@
     <header class="main-header">
       <nav class="nav-bar">
         <ul>
-          <li><a href="../index.html"> Home </a></li>
-
-          <li><a href="../Pages/about.html"> About Me </a></li>
-
-          <li><a href="../Pages/contact.html"> Contact </a></li>
+          <li> <a href="../index.html"> Home </a> </li>
+          <li> <a href="../Pages/about.html"> About Me </a> </li>
+          <li> <a href="../Pages/contact.html"> Contact </a> </li>
         </ul>
       </nav>
     </header>
 
     <section class="project-detail">
-      <h1>Spook-e-scape</h1>
+      <h1>Spook-E-Scape</h1>
 
       <div class="project-flex">
         <div class="project-left">
           <div class="main-showcase">
-            <img
-              src="../Assets/Images/SpookEscape/Spook-E-ScapeThumbnail.png"
-              alt="Spook-e-scape Screenshot"
-              class="main-image"
-              id="mainImage"
-            />
+            <img src="../Assets/Images/SpookEscape/Spook-E-ScapeThumbnail.png" alt="Project Screenshot" class="main-image" id="mainImage"/>
+
+            <div class="video-container" id="videoContainer" style="display: none">
+             
+              <video id="mainVideo" autoplay loop playsinline class="main-video" ></video>
+
+              <div class="custom-video-controls">
+                <button type="button" id="playPauseBtn" class="vapor-btn"> ⏸ </button>
+
+                <div class="progress-bar-wrapper" id="progressWrapper">
+                  <div class="progress-bar-fill" id="progressFill"></div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="thumbnails">
-            <img
-              src="../Assets/Images/SpookEscape/Spook-E-ScapeThumbnail.png"
-              onclick="
-                changeShowcase(
-                  '../Assets/Images/SpookEscape/Spook-E-ScapeThumbnail.png',
-                )
-              "
-              alt="Spook-e-scape image 1"
-            />
+          <div class="thumbnail-gallery">
+            <button class="gallery-arrow left" onclick="scrollThumbnails(-1)"> &#10094; </button>
 
-            <img
-              src="../Assets/Images/wavegrid.jpg"
-              onclick="changeShowcase('../Assets/Images/wavegrid.jpg')"
-              alt="Spook-e-scape image 2"
-            />
+            <div class="thumbnail-window">
+              <div class="thumbnails">
 
-            <img
-              src="../Assets/Images/wavegrid.jpg"
-              onclick="changeShowcase('../Assets/Images/wavegrid.jpg')"
-              alt="Spook-e-scape image 3"
-            />
+                <img src="../Assets/Images/WIP.png" 
+                onclick=" changeShowcase('../Assets/Images/WIP.png',)" alt="Project image 1" />
+
+                <img src="../Assets/Images/WIP.png" 
+                onclick=" changeShowcase('../Assets/Images/WIP.png',)" alt="Project image 1" />
+
+                <img src="../Assets/Images/WIP.png" 
+                onclick=" changeShowcase('../Assets/Images/WIP.png',)" alt="Project image 1" />
+
+                <img src="../Assets/Images/WIP.png" 
+                onclick=" changeShowcase('../Assets/Images/WIP.png',)" alt="Project image 1" />
+
+              </div>
+            </div>
+
+            <button class="gallery-arrow right" onclick="scrollThumbnails(1)"> &#10095; </button>
           </div>
 
-          <div class="project-summary">
-            <p>
-              Spook-e-scape is a platformer project inspired by spooky
-              environments and exploration.
-              <br /><br />
-
-              The project focused on creating gameplay mechanics, level design
-              and atmosphere using Unity.
-              <br /><br />
-
-              This project allowed me to experiment with creating a fun and
-              visually interesting player experience.
-            </p>
-          </div>
+          <div class="project-summary"> <p> summary </p> </div>
         </div>
 
         <div class="project-right">
           <div class="info-card">
-            <p><strong> Genre: </strong> Escape room</p>
-            <p><strong> Platform: </strong> PC</p>
-            <p><strong> Game status: </strong> Demo</p>
-            <p><strong> Engine: </strong> Unity</p>
+            <p>
+              <strong> Genre: </strong>
+            </p>
+
+            <p>
+              <strong> Platform: </strong>
+            </p>
+
+            <p>
+              <strong> Status: </strong>
+            </p>
+
+            <p>
+              <strong> Engine: </strong>
+            </p>
+
+            <a href="https://github.com/Sint-Lucas/sd2-p8-specialisation-game-practice-2425-ScottishPancakeSchoolaccount" target="_blank" class="info-btn">
+              <strong> GitHub Repository </strong>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- IMAGE SWITCH SCRIPT -->
-    <script>
-      function changeShowcase(imageSrc) {
-        const mainImage = document.getElementById("mainImage");
-        mainImage.src = imageSrc;
-      }
-    </script>
+    <script src="../JS/script.js"></script>
   </body>
 </html>
