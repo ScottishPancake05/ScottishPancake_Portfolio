@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project - Scottish Pancake</title>
+    <title>Vice Shooter - Scottish Pancake</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
@@ -32,47 +32,56 @@
       <div class="project-flex">
         <div class="project-left">
           <div class="main-showcase">
-            <img src="../Assets/Images/WIP.png" alt="Project Screenshot" class="main-image" id="mainImage"/>
+            <img src="../Assets/Images/ViceShooter/player.png" alt="Project Screenshot" class="main-image" id="mainImage"/>
 
             <div class="video-container" id="videoContainer" style="display: none">
              
               <video id="mainVideo" autoplay loop playsinline class="main-video" ></video>
 
               <div class="custom-video-controls">
-                <button type="button" id="playPauseBtn" class="vapor-btn"> ⏸ </button>
 
+                <button type="button" id="playPauseBtn" class="vapor-btn"> ⏸ </button>
                 <div class="progress-bar-wrapper" id="progressWrapper">
-                  <div class="progress-bar-fill" id="progressFill"></div>
+                <div class="progress-bar-fill" id="progressFill"></div>
+
                 </div>
               </div>
             </div>
           </div>
 
           <div class="thumbnail-gallery">
-            <button class="gallery-arrow left" onclick="scrollThumbnails(-1)"> &#10094; </button>
 
             <div class="thumbnail-window">
               <div class="thumbnails">
 
-               <img src="../Assets/Images/WIP.png" 
-                onclick=" changeShowcase('../Assets/Images/WIP.png',)" alt="Project image 1" />
+               <img src="../Assets/Images/ViceShooter/player.png" 
+                onclick=" changeShowcase('../Assets/Images/ViceShooter/player.png',)" alt="Project image 1" />
 
-                <img src="../Assets/Images/WIP.png" 
-                onclick=" changeShowcase('../Assets/Images/WIP.png',)" alt="Project image 1" />
+                <img src="../Assets/Images/ViceShooter/thumbnail.png" 
+                onclick=" changeShowcase('../Assets/Videos/ViceShooter/Viceshootervideo.mp4',)" alt="Project image 2" />
 
-                <img src="../Assets/Images/WIP.png" 
-                onclick=" changeShowcase('../Assets/Images/WIP.png',)" alt="Project image 1" />
+                <img src="../Assets/Images/ViceShooter/player2.png" 
+                onclick=" changeShowcase('../Assets/Images/ViceShooter/player2.png',)" alt="Project image 3" />
 
-                <img src="../Assets/Images/WIP.png" 
-                onclick=" changeShowcase('../Assets/Images/WIP.png',)" alt="Project image 1" />
+                <img src="../Assets/Images/ViceShooter/aiNav.png" 
+                onclick=" changeShowcase('../Assets/Images/ViceShooter/aiNav.png',)" alt="Project image 4" />
 
               </div>
             </div>
 
-            <button class="gallery-arrow right" onclick="scrollThumbnails(1)"> &#10095; </button>
           </div>
 
-          <div class="project-summary"> <p> (typing...) </p> </div>
+          <div class="project-summary"> 
+            <p> 
+              Shoot the beans to win!
+              <br> <br> --- <br>
+              Vice Shooter was my very first 3D game made in Unity.
+              This project was a massive learning experience where I learned the basics of Unity 3D.
+              Through making this game, I learned how to use Scriptable Objects, set up enemy pathfinding using the AI NavMesh and build custom spawners to keep the enemies coming!
+              <br> <br> 
+              Working on this project was the main reason I later started Vice Noire as a personal project, which is also a First-Person Shooter.
+            </p>
+           </div>
         </div>
 
         <div class="project-right">

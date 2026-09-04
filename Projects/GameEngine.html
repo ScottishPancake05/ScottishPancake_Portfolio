@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project - Scottish Pancake</title>
+    <title>PancakeEngine - Scottish Pancake</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
@@ -32,11 +32,11 @@
       <div class="project-flex">
         <div class="project-left">
           <div class="main-showcase">
-            <img src="../Assets/Images/WIP.png" alt="Project Screenshot" class="main-image" id="mainImage"/>
+            <img src="../Assets/Images/OwnGameEngine/gameshow.png" alt="Project Screenshot" class="main-image" id="mainImage"/>
 
             <div class="video-container" id="videoContainer" style="display: none">
              
-              <video id="mainVideo" autoplay loop playsinline class="main-video" ></video>
+              <video id="mainVideo" autoplay loop muted playsinline class="main-video" ></video>
 
               <div class="custom-video-controls">
                 <button type="button" id="playPauseBtn" class="vapor-btn"> ⏸ </button>
@@ -49,27 +49,25 @@
           </div>
 
           <div class="thumbnail-gallery">
-            <button class="gallery-arrow left" onclick="scrollThumbnails(-1)"> &#10094; </button>
 
             <div class="thumbnail-window">
               <div class="thumbnails">
 
-                <img src="../Assets/Images/WIP.png" 
-                onclick=" changeShowcase('../Assets/Images/WIP.png',)" alt="Project image 1" />
+                <img src="../Assets/Images/OwnGameEngine/gameshow.png" 
+                onclick=" changeShowcase('../Assets/Images/OwnGameEngine/gameshow.png',)" alt="Project image 1" />
 
-                <img src="../Assets/Images/WIP.png" 
-                onclick=" changeShowcase('../Assets/Images/WIP.png',)" alt="Project image 1" />
+                <img src="../Assets/Images/OwnGameEngine/game1.png" 
+                onclick=" changeShowcase('../Assets/Videos/OwnGameEngine/gameOne.mp4',)" alt="Project image 1" />
 
-                <img src="../Assets/Images/WIP.png" 
-                onclick=" changeShowcase('../Assets/Images/WIP.png',)" alt="Project image 1" />
+                <img src="../Assets/Images/OwnGameEngine/game2.png" 
+                onclick=" changeShowcase('../Assets/Videos/OwnGameEngine/gameTwo.mp4',)" alt="Project image 1" />
 
-                <img src="../Assets/Images/WIP.png" 
-                onclick=" changeShowcase('../Assets/Images/WIP.png',)" alt="Project image 1" />
+                <img src="../Assets/Images/OwnGameEngine/game3.png" 
+                onclick=" changeShowcase('../Assets/Videos/OwnGameEngine/gameThree.mp4',)" alt="Project image 1" />
 
               </div>
             </div>
 
-            <button class="gallery-arrow right" onclick="scrollThumbnails(1)"> &#10095; </button>
           </div>
 
           <div class="project-summary"> <p> (typing...) </p> </div>
